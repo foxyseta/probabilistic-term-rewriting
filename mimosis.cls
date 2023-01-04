@@ -59,7 +59,7 @@
 
 \RequirePackage{graphicx}
 \graphicspath{%
-  {Figures/}
+  {img/}
   {./}
 }
 

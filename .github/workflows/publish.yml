@@ -23,11 +23,12 @@ concurrency:
 # parallel
 jobs:
   # This workflow contains a single job called "build"
-  deploy:
+  publish:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./thesis/
+    defaults:
+      run:
+        working-directory: thesis/
     # Steps represent a sequence of tasks that will be executed as part of the
     # job
     steps:

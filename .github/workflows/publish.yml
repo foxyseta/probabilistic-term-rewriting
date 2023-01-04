@@ -36,8 +36,8 @@ jobs:
         uses: hspaans/latexmk-action@v1
         with:
           format: pdf
-          filename: "thesis.tex"
-      - run: mkdir pages && mv *.pdf pages/
+          filename: "thesis/thesis.tex"
+      - run: mkdir pages && mv thesis/*.pdf pages/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

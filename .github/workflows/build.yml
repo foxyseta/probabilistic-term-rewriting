@@ -22,14 +22,8 @@ jobs:
     # job
     steps:
       - uses: actions/checkout@v3
-      # This hack makes hspaans/latexmk-action use lualatex:
-      - run: echo "\$pdflatex = 'lualatex -file-line-error %O %S';" >> latexmkrc
-      - name: Compile LateX
-        uses: hspaans/latexmk-action@v1
-        with:
-          format: pdf
-          filename: "thesis.tex"
-      - run: mkdir pages && mv *.pdf pages/
+      - uses: reitermarkus/latexmk@main
+      - run: mkdir pages && mv thesis/*.pdf pages/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:

@@ -3,13 +3,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{center}
-  \begin{minipage}{0.5\textwidth}
-    \begin{small}
-      In which the reasons for creating this package are laid bare for the
-      whole world to see and we encounter some usage guidelines.
-    \end{small}
-  \end{minipage}
-  \vspace{0.5cm}
+	\begin{minipage}{0.5\textwidth}
+		\begin{small}
+			In which the reasons for creating this package are laid bare for the
+			whole world to see and we encounter some usage guidelines.
+		\end{small}
+	\end{minipage}
+	\vspace{0.5cm}
 \end{center}
 
 \noindent This package contains a minimal, modern template for writing your
@@ -41,19 +41,11 @@ default settings, just add
 \documentclass{mimosis}
 \end{verbatim}
 %
-at the beginning of your document. This is sufficient to use the class.
-It is possible to build your document using either \LaTeX|, \XeLaTeX, or
-\LuaLaTeX. I personally prefer one of the latter two because they make
-it easier to select proper fonts.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Making this template \emph{yours}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Prior to using this template, the first thing you want to do is probably
-a little bit of customisation. You can achieve quick changes in look and
-feel by picking your own fonts. With the \verb|fontspec| package loaded
-and  \XeLaTeX or \LuaLaTeX as your compiler, this is pretty simple:
 %
 \begin{verbatim}
 \setmainfont{Your main font}
@@ -73,14 +65,14 @@ system. For instance, you might want to use the following combination:
 \end{verbatim}
 %
 \ifxetexorluatex
-If these fonts exist on your system, your normal text will look
-{\fontspec{Libre Baskerville}{a little bit different from the other font used
-in this example PDF}}, while your sans-serif font {\fontspec[Scale=MatchLowercase]{IBM Plex Sans}will 
-pair nicely with your} {\fontspec[Scale=MatchLowercase]{IBM Plex Mono}{monospaced font}}.
-%
-You can also remove the \verb|Scale| directive, but I find that most
-fonts pair better if they are adjusted in size a little bit. Experiment
-with it until you finds a combination that you enjoy.
+	If these fonts exist on your system, your normal text will look
+		{\fontspec{Libre Baskerville}{a little bit different from the other font used
+				in this example PDF}}, while your sans-serif font {\fontspec[Scale=MatchLowercase]{IBM Plex Sans}will
+			pair nicely with your} {\fontspec[Scale=MatchLowercase]{IBM Plex Mono}{monospaced font}}.
+	%
+	You can also remove the \verb|Scale| directive, but I find that most
+	fonts pair better if they are adjusted in size a little bit. Experiment
+	with it until you finds a combination that you enjoy.
 \fi
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,32 +81,32 @@ with it until you finds a combination that you enjoy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
-  \centering
-  \begin{tabular}{ll}
-    \toprule
-    \textbf{Package}      & \textbf{Purpose}\\
-    \midrule
-      \texttt{amsmath}          & Basic mathematical typography\\
-      \texttt{amsthm}           & Basic mathematical environments for proofs etc.\\
-      \texttt{babel}            & Language settings\\
-      \texttt{booktabs}         & Typographically light rules for tables\\
-      \texttt{bookmarks}        & Bookmarks in the resulting PDF\\
-      \texttt{csquotes}         & Language-specific quotation marks\\
-      \texttt{dsfont}           & Double-stroke font for mathematical concepts\\
-      \texttt{graphicx}         & Graphics\\
-      \texttt{hyperref}         & Hyperlinks\\
-      \texttt{multirow}         & Permits table content to span multiple rows or columns\\ 
-      \texttt{paralist}         & Paragraph~(`in-line') lists and compact enumerations\\
-      \texttt{scrlayer-scrpage} & Page headings\\
-      \texttt{setspace}         & Line spacing\\
-      \texttt{siunitx}          & Proper typesetting of units\\
-      \texttt{subcaption} & Proper sub-captions for figures\\
-    \bottomrule
-  \end{tabular}
-  \caption{%
-    A list of the most relevant packages required~(and automatically imported) by this template.
-  }
-  \label{tab:Packages}
+	\centering
+	\begin{tabular}{ll}
+		\toprule
+		\textbf{Package}          & \textbf{Purpose}                                       \\
+		\midrule
+		\texttt{amsmath}          & Basic mathematical typography                          \\
+		\texttt{amsthm}           & Basic mathematical environments for proofs etc.        \\
+		\texttt{babel}            & Language settings                                      \\
+		\texttt{booktabs}         & Typographically light rules for tables                 \\
+		\texttt{bookmarks}        & Bookmarks in the resulting PDF                         \\
+		\texttt{csquotes}         & Language-specific quotation marks                      \\
+		\texttt{dsfont}           & Double-stroke font for mathematical concepts           \\
+		\texttt{graphicx}         & Graphics                                               \\
+		\texttt{hyperref}         & Hyperlinks                                             \\
+		\texttt{multirow}         & Permits table content to span multiple rows or columns \\
+		\texttt{paralist}         & Paragraph~(`in-line') lists and compact enumerations   \\
+		\texttt{scrlayer-scrpage} & Page headings                                          \\
+		\texttt{setspace}         & Line spacing                                           \\
+		\texttt{siunitx}          & Proper typesetting of units                            \\
+		\texttt{subcaption}       & Proper sub-captions for figures                        \\
+		\bottomrule
+	\end{tabular}
+	\caption{%
+		A list of the most relevant packages required~(and automatically imported) by this template.
+	}
+	\label{tab:Packages}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -135,18 +127,18 @@ If you want to show multiple equations and align them, use the
 \verb|align| environment:
 %
 \begin{align}
-    V &:= \{ 1, 2, \dots \}\\
-    E &:= \big\{ \left(u,v\right) \mid \dist\left(p_u, p_v\right) \leq \epsilon \big\}
+	V & := \{ 1, 2, \dots \}                                                            \\
+	E & := \big\{ \left(u,v\right) \mid \dist\left(p_u, p_v\right) \leq \epsilon \big\}
 \end{align}
 %
 Define new mathematical operators using \verb|\DeclareMathOperator|.
 Some operators are already pre-defined by the template, such as the
-distance between two objects. Please see the template for some examples. 
+distance between two objects. Please see the template for some examples.
 %
 Moreover, this template contains a correct differential operator. Use \verb|\diff| to typeset the differential of integrals:
 %
 \begin{equation}
-  f(u) := \int_{v \in \domain}\dist(u,v)\diff{v}
+	f(u) := \int_{v \in \domain}\dist(u,v)\diff{v}
 \end{equation}
 %
 You can see that, as a courtesy towards most mathematicians, this
@@ -165,9 +157,9 @@ Along with the standard environments, this template offers
 Here's a quick example: The American constitution speaks, among others, of
 %
 \begin{inparaenum}[(i)]
-  \item life
-  \item liberty
-  \item the pursuit of happiness.
+	\item life
+	\item liberty
+	\item the pursuit of happiness.
 \end{inparaenum}
 %
 These should be added in equal measure to your own conduct. To typeset
